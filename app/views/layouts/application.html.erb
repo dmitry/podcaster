@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport'>
     <title>Подкаст о Тенерифе</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -12,7 +14,7 @@
   <body>
     <div class="ui main text container">
       <h1 class="ui header centered">
-        Подкаст о Тенерифе
+        <%= link_to_unless_current 'Подкаст о Тенерифе', root_path %>
       </h1>
 
       <%= yield %>
