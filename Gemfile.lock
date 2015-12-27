@@ -197,6 +197,7 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4.1)
+    sass (3.4.20)
     shrine (1.0.0)
       down (>= 1.0.3)
     sidekiq (4.0.1)
@@ -260,6 +261,7 @@ DEPENDENCIES
   puma
   rails (>= 5.0.0.beta1, < 5.1)
   sanitize
+  sass
   shrine
   simple_form
   spring
