@@ -18,7 +18,7 @@ class EpisodeDecorator < Draper::Decorator
 
   def to_html(text)
     string = Kramdown::Document.new(text).to_html
-    string = Sanitize.fragment(string, elements: %w(b p br))
+    string = Sanitize.fragment(string, elements: %w(b p br h2 h3 h4 ul li))
     string.html_safe
   end
 end
