@@ -7,5 +7,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 
 Rails.application.config.assets.precompile += %w(soundmanager2_flash9.swf)
-Rails.application.config.assets.paths << Rails.root.join(*%w(vendor assets images bar-ui))
+Rails.application.config.assets.paths << Rails.root.join(*%w(vendor assets images soundmanager2 bar-ui))
 Rails.application.config.assets.precompile += %w(*.jpg *.png *.gif *.jpeg *.svg)
