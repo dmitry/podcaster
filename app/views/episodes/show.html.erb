@@ -1,0 +1,21 @@
+<section>
+  <article class="episode general">
+    <header>
+      <time class="date">
+        <%= @episode.published_at %>
+      </time>
+      <h2>
+        <%= @episode.header %>
+      </h2>
+    </header>
+    <section>
+      <%= render 'player', url: @episode.audio.url, name: @episode.header %>
+
+      <%= link_to 'Скачать эпизод', @episode.audio.url, target: '_blank', class: 'download' %>
+
+      <div class="ui text">
+        <%= @episode.text %>
+      </div>
+    </section>
+  </article>
+</section>

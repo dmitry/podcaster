@@ -1,0 +1,42 @@
+<section>
+  <% if @current %>
+    <article class="episode general">
+      <header>
+        <time class="date">
+          <%= @current.published_at %>
+        </time>
+        <h2>
+          <%= link_to @current.header, @current  %>
+        </h2>
+      </header>
+      <section>
+        <%= render 'player', url: @current.audio.url, name: @current.header %>
+
+        <%= link_to 'Скачать эпизод', @current.audio.url, target: '_blank', class: 'download' %>
+
+        <div class="ui text">
+          <%= @current.short_text %>
+        </div>
+      </section>
+    </article>
+  <% end %>
+
+  <% if @previous.present? %>
+    <h4 class="ui horizontal divider header">
+      Предыдущие подкасты
+    </h4>
+
+    <% @previous.each do |episode| %>
+      <article class="ui vertical segment episode archive">
+        <header>
+          <time class="date">
+            <%= episode.published_at %>
+          </time>
+          <h2>
+            <%= link_to episode.header, episode %>
+          </h2>
+        </header>
+      </article>
+    <% end %>
+  <% end %>
+</section>

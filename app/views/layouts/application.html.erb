@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Podcaster</title>
+    <title>Подкаст о Тенерифе</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
 
@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="ui main text container">
+      <h1 class="ui header centered">
+        Подкаст о Тенерифе
+      </h1>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,15 +1,46 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
+ *= require semantic-ui/reset
+ *= require semantic-ui/site
+ *= require semantic-ui/container
+ *= require semantic-ui/grid
+ *= require semantic-ui/header
+ *= require semantic-ui/divider
+ *= require semantic-ui/segment
+ *= require semantic-ui/form
+ *= require semantic-ui/input
+ *= require semantic-ui/button
+ *= require semantic-ui/label
+ *= require soundmanager2/bar-ui
  *= require_self
  */
+
+body {
+  border-top: 8px solid #0d71bb;
+}
+
+h1.ui.header {
+  margin: 20px 0 !important;
+}
+
+.episode .date {
+  font-size: 13px;
+  margin: 5px 0;
+  color: #767676;
+  font-family: Helvetica, sans-serif;
+}
+.episode .download {
+  font-size: 13px;
+  margin: 5px 0;
+  text-align: right;
+  display: block;
+  font-family: "calluna-sans", Helvetica, sans-serif;
+}
+.episode.general h2 {
+  margin: 0 0 10px;
+}
+.episode.archive h2 {
+  margin: 0;
+}
+.episode .text {
+  margin-top: 10px;
+}
