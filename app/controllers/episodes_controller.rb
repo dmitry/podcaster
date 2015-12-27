@@ -6,7 +6,7 @@ class EpisodesController < ApplicationController
   end
 
   def show
-    @episode = Episode.find_by(slug: params[:id])
+    @episode = Episode.find_by(slug: params[:id]).decorate
   end
 
   def new
