@@ -16,7 +16,10 @@
 
 body {
   border-top: 8px solid #0d71bb;
-  padding-bottom: 30px;
+}
+
+.ui.footer {
+  margin-top: 30px !important;
 }
 
 h1.ui.header {

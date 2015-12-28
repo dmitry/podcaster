@@ -11,7 +11,7 @@
     <section>
       <%= render 'player', url: @episode.audio.url, name: @episode.header %>
 
-      <%= link_to 'Скачать эпизод', @episode.audio.url, target: '_blank', class: 'download' %>
+      <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(@episode.audio.metadata['size'])})", @episode.audio.url, target: '_blank', class: 'download' %>
 
       <div class="ui text">
         <%= @episode.text %>
