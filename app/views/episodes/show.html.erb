@@ -14,7 +14,7 @@
       <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(@episode.audio.metadata['size'])})", audio_url(@episode.audio.url), target: '_blank', class: 'download' %>
 
       <div class="ui text">
-        <%= image_tag(@episode.image[:small].url, align: 'left') %>
+        <%= image_tag(@episode.image[:small].url, class: 'ui image') %>
         <%= @episode.text %>
       </div>
     </section>
