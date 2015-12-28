@@ -9,11 +9,12 @@
       </h2>
     </header>
     <section>
-      <%= render 'player', url: @episode.audio.url, name: @episode.header %>
+      <%= render 'player', url: audio_url(@episode.audio.url), name: @episode.header %>
 
-      <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(@episode.audio.metadata['size'])})", @episode.audio.url, target: '_blank', class: 'download' %>
+      <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(@episode.audio.metadata['size'])})", audio_url(@episode.audio.url), target: '_blank', class: 'download' %>
 
       <div class="ui text">
+        <%= image_tag(@episode.image[:small].url, align: 'left') %>
         <%= @episode.text %>
       </div>
     </section>

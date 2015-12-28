@@ -1,3 +1,9 @@
+<%
+content_for(:head) do
+  auto_discovery_link_tag(:rss, root_url(format: 'rss'), {title: "Подкаст о Тенерифе"})
+end
+%>
+
 <section>
   <% if @current %>
     <article class="episode general">
@@ -10,9 +16,9 @@
         </h2>
       </header>
       <section>
-        <%= render 'player', url: @current.audio.url, name: @current.header %>
+        <%= render 'player', url: audio_url(@current.audio.url), name: @current.header %>
 
-        <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(@current.audio.metadata['size'])})", @current.audio.url, target: '_blank', class: 'download' %>
+        <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(@current.audio.metadata['size'])})", audio_url(@current.audio.url), target: '_blank', class: 'download' %>
 
         <div class="ui text">
           <%= @current.short_text %>
