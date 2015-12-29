@@ -30,6 +30,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'fontello_rails_converter'
+
   gem 'puma'
   gem 'web-console', '~> 3.0'
   gem 'spring'

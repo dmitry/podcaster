@@ -1,8 +1,8 @@
 class EpisodesController < ApplicationController
   def index
-    @episodes = Episode.published.published_order.to_a
-    @current = @episodes.first.decorate
-    @previous = @episodes[1..-1].map(&:decorate)
+    @episodes = Episode.published.published_order.to_a.map(&:decorate)
+    @current = @episodes.first
+    @previous = @episodes[1..-1]
   end
 
   def show

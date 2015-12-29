@@ -1,7 +1,7 @@
 class EpisodeDecorator < Draper::Decorator
   delegate_all
 
-  def published_at
+  def published_date
     l(object.published_at.to_date)
   end
 

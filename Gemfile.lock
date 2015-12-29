@@ -117,6 +117,8 @@ GEM
     connection_pool (2.2.0)
     crass (1.0.2)
     debug_inspector (0.0.2)
+    domain_name (0.5.25)
+      unf (>= 0.0.5, < 1.0.0)
     down (1.0.5)
     em-hiredis (0.3.0)
       eventmachine (~> 1.0)
@@ -129,10 +131,17 @@ GEM
     faye-websocket (0.10.2)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
+    fontello_rails_converter (0.4.2)
+      activesupport
+      launchy
+      rest-client
+      rubyzip (~> 1.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hiredis (0.5.2)
     hitimes (1.2.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     image_processing (0.2.4)
     jquery-rails (4.0.5)
@@ -141,6 +150,8 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     kramdown (1.9.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     libv8 (3.16.14.13)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -154,6 +165,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.1)
+    netrc (0.11.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     nokogumbo (1.4.7)
@@ -193,6 +205,11 @@ GEM
     redis (3.2.2)
     ref (2.0.0)
     request_store (1.2.1)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    rubyzip (1.1.7)
     sanitize (4.0.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
@@ -232,6 +249,9 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     web-console (3.0.0)
       activemodel (>= 4.2)
       debug_inspector
@@ -254,6 +274,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   draper!
   fastimage
+  fontello_rails_converter
   image_processing
   jquery-rails
   kramdown

@@ -11,6 +11,7 @@
  *= require semantic-ui/button
  *= require semantic-ui/label
  *= require soundmanager2/bar-ui
+ *= require fontello
  *= require_self
  */
 
@@ -55,4 +56,30 @@ h1.ui.header {
 }
 .episode .text {
   margin-top: 10px;
+}
+
+.social-networks {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.social-networks a {
+  font-size: 1.5em;
+  width: 36px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.social-networks .icon-youtube {
+  color: #cd201f;
+}
+.social-networks .icon-facebook {
+  color: #3b5998;
+}
+.social-networks .icon-vkontakte {
+  color: #45668e;
+}
+.social-networks .icon-rss {
+  color: #f26522;
+}
+.social-networks a::before {
+  width: auto;
 }

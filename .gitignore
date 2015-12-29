@@ -20,6 +20,7 @@
 /public/system/*
 /public/assets/*
 /config/deploy/*
+/public/fontello-demo.html
 
 # Ignore Byebug command history file.
 .byebug_history

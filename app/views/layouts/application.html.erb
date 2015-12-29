@@ -14,17 +14,24 @@
   </head>
 
   <body>
-    <div class="ui main text container">
+    <div class="ui container">
       <h1 class="ui header centered">
         <%= link_to_unless_current 'Подкаст о Тенерифе', root_path %>
       </h1>
+      <div class="social-networks">
+        <%= link_to '', 'https://www.facebook.com/Tenerife4Dummies/', class: 'icon-facebook', title: 'Facebook', target: '_blank' %>
+        <%= link_to '', 'https://vk.com/tenerife4dummies', class: 'icon-vk', title: 'VKontakte', target: '_blank' %>
+        <%= link_to '', 'https://www.youtube.com/channel/UCPksMLkLx63N27ZRMX67JHA', class: 'icon-youtube', title: 'YouTube', target: '_blank' %>
+        <%= link_to '', root_url(format: :rss), class: 'icon-rss', title: 'RSS', target: '_blank' %>
+      </div>
 
       <%= yield %>
     </div>
 
     <div class="ui inverted vertical footer segment">
       <div class="ui container text">
-        Некоммерческий проект - Подкаст о Тенерифе &copy; <a href="http://dmitry.eu" target="_blank">dmitry.eu</a> 2016
+        Некоммерческий проект &bull; Подкаст о Тенерифе &copy; 2016 &bull; Подкасты озвучены <a href="http://dmitry.eu" target="_blank">Дмитрием</a>
+
       </div>
     </div>
 
