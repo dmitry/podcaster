@@ -195,6 +195,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails-i18n (4.0.2)
+      i18n (~> 0.6)
+      rails (>= 4.0)
     railties (5.0.0.beta1)
       actionpack (= 5.0.0.beta1)
       activesupport (= 5.0.0.beta1)
@@ -281,6 +284,7 @@ DEPENDENCIES
   mini_magick
   puma
   rails (>= 5.0.0.beta1, < 5.1)
+  rails-i18n
   sanitize
   sass
   shrine
