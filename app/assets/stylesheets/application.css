@@ -83,3 +83,12 @@ h1.ui.header {
 .social-networks a::before {
   width: auto;
 }
+.description {
+  text-align: center;
+}
+hr {
+  height: 1px;
+  border: 0;
+  background: #ccc;
+  margin: 20px 0;
+}
