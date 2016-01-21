@@ -1,0 +1,24 @@
+<% vertical ||= false %>
+<article class="ui episode general <%= 'segment vertical' if vertical %>">
+  <header>
+    <time class="date">
+      <%= episode.published_date %>
+    </time>
+    <h2>
+      <%= link_to episode.header, episode  %>
+    </h2>
+  </header>
+  <section style="overflow:hidden;">
+    <%= image_tag(episode.image[:small].url, class: 'ui image', style: 'float:left;width:180px;') %>
+
+    <div style="margin-left:200px;">
+      <%= render 'player', url: audio_url(episode.audio.url), name: episode.header %>
+
+      <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(episode.audio.metadata['size'])})", audio_url(episode.audio.url), target: '_blank', class: 'download' %>
+
+      <div class="ui text">
+        <%= episode.short_text %>
+      </div>
+    </div>
+  </section>
+</article>

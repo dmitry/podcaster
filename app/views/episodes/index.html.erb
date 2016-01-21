@@ -6,25 +6,7 @@ end
 
 <section>
   <% if @current %>
-    <article class="episode general">
-      <header>
-        <time class="date">
-          <%= @current.published_date %>
-        </time>
-        <h2>
-          <%= link_to @current.header, @current  %>
-        </h2>
-      </header>
-      <section>
-        <%= render 'player', url: audio_url(@current.audio.url), name: @current.header %>
-
-        <%= link_to "Скачать эпизод в mp3 (#{number_to_human_size(@current.audio.metadata['size'])})", audio_url(@current.audio.url), target: '_blank', class: 'download' %>
-
-        <div class="ui text">
-          <%= @current.short_text %>
-        </div>
-      </section>
-    </article>
+    <%= render 'episode', episode: @current %>
   <% end %>
 
   <% if @previous.present? %>
@@ -33,16 +15,7 @@ end
     </h4>
 
     <% @previous.each do |episode| %>
-      <article class="ui vertical segment episode archive">
-        <header>
-          <time class="date">
-            <%= episode.published_date %>
-          </time>
-          <h2>
-            <%= link_to episode.header, episode %>
-          </h2>
-        </header>
-      </article>
+      <%= render episode, vertical: true %>
     <% end %>
   <% end %>
 </section>
